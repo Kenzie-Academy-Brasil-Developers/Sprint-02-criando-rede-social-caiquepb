@@ -3,6 +3,8 @@
 }
 
 .nav__container {
+
+    
     background-color: var(--color-grey-1);
     color: var(--color-white-fixed);
 
@@ -20,7 +22,7 @@
     
     font-family: 'Inter';
 
-    z-index: 9;
+    z-index: 8;
 }
 
 nav > button {
@@ -39,6 +41,10 @@ nav > button:hover {
     padding-top: 100px;
 }
 
+aside{
+    margin-bottom: 40px;
+}
+
 img {
     width: 52px;
 }
@@ -47,11 +53,46 @@ img {
     margin-bottom: 40px;
 }
 
-.section__conteiner {
+.user__conteiner {
     display: flex;
     align-items: center;
     
     margin-bottom: 40px;
+}
+
+.title_post{
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    color: var(--color-grey-1);
+}
+
+.text__post{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 32px;
+    color: var(--color-grey-2);
+}
+
+.button__post{
+    width: 94px;
+    height: 38px;
+    margin-bottom: 50px;
+
+    justify-content: center;
+    align-items: center;
+    padding: 0px 12px;
+
+    background: #212529;
+    border: 2px solid #212529;
+    border-radius: 4px;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--color-white-fixed);
 }
 
 .user__infos {
@@ -61,7 +102,7 @@ img {
     padding-left: 12px;
 }
 
-.user__infos > p {
+.user__stack {
     font-size: 14px;
     font-weight: 400;
 }
@@ -129,4 +170,79 @@ img {
     font-weight: 600;
 
     color: var(--color-grey-3);
+}
+
+.modal__container {
+    
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    z-index: 9;
+    
+    background: rgba(33, 37, 41, 0.5);
+    
+}
+
+.modal__div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 24px;
+    gap: 32px;
+
+    position: fixed;
+    width: 90vw;
+    height: 90vh;
+    left: 20px;
+    top: 50px;
+
+    background: #FFFFFF;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.modal__fechar{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: -5px;
+    top: 20px;
+}
+
+@media(min-width: 426px){
+    *{
+        margin: 0 100px;
+    }
+    .header__box{
+        display: flex;
+
+    }
+    .section_input{
+        width: 50vw;
+        height: 264px;
+        align-items: flex-start;
+    }
+
+    .input_title, .input_text{
+        min-width: 100%;
+    }
+    
+    article{
+        max-width: 50vw
+    }
+
+    .modal__div{
+        width: 50vw;
+        height: 50vh;
+        left: 25%;
+        top: 10%;
+        overflow-x: hidden;
+    }
+    
 }
